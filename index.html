@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+<script >
+function fun(){
+	var name = document.form.uname.value;
+	if (name == null | name == ""){
+		alert("Name can't be null");	
+	}
+	var pass = document.form.upass.value;
+	if (pass == null | pass.length < 5){
+		alert("Invalid Password");	
+	}	
+	var contact = document.form.mobile.value;
+	if (contact == null | contact.length != 10){
+		alert("Invalid contact");
+	}
+	var address = document.form.address.value;
+	if (address == null | address == ""){
+		alert("Address can't be null");	
+	}
+	
+	
+}
+
+
+
+</script>
+</head>
+<body>
+<form method="post" name="form" onSubmit="fun()"><br><br>
+User Name:<input type="text" name="uname"><br><br>
+Password:<input type="password" name="upass"><br><br>
+Contact:<input type="number" name="mobile"><br><br>
+Address<input name="address" type="text"><br><br>
+<button type="submit">submit</button>
+
+</form>
+
+</body>
+</html>
